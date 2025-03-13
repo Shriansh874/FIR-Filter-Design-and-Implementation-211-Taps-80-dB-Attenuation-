@@ -33,6 +33,10 @@ The repository is organized into several key folders and files:
     - Reduced-complexity parallel processing (L=2 and L=3).
     - Combined pipelining and L=3 parallel processing.
   - **Testbenches:** HDL testbench files to simulate and verify the filter functionality.
+ 
+- **`/TestBench/`**  
+  Contains the testbench files for all the Verilog code:
+  - **Testbenches:** Simulation testbench files to verify and validate the functionality of the FIR filter across all architectural variations.
 
 - **`/docs/`**  
   Documentation and additional resources:
