@@ -1,7 +1,7 @@
 # FIR Filter Design and Implementation  
 **(211-Taps, 80 dB Attenuation)**
 
-This repository contains the design and implementation of a low-pass Finite Impulse Response (FIR) filter as part of a course project. The project uses MATLAB for filter design and either Verilog (preferred) or VHDL for the hardware implementation. The design is targeted toward achieving a stopband attenuation of at least 80 dB with a filter having approximately 211 taps.
+This repository contains the design and implementation of a low-pass Finite Impulse Response (FIR) filter as part of a course project. The project uses MATLAB for filter design and Verilog for the hardware implementation. The design is targeted toward achieving a stopband attenuation of at least 80 dB with a filter having approximately 211 taps.
 ## Project Overview
 
 ### Objective
