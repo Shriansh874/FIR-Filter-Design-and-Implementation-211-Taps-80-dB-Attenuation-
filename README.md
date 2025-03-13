@@ -24,7 +24,8 @@ The repository is organized into several key folders and files:
   Contains MATLAB scripts and functions used to design the FIR filter. Here you will find:
   - **Filter Design Script:** A script that constructs the 211-tap FIR filter meeting the specified transition band and stopband attenuation requirements.
   - **Coefficient Quantization:** Files and documentation regarding how the filter coefficients and data were quantized.
-  
+  - **Coefficient Text File:** A text file with the quantized filter coefficients, allowing for easy reference and reuse.
+      
 - **`/Verilog/`**  
   Includes the hardware implementation files:
   - **Verilog/VHDL Files:** Source code files implementing the FIR filter.
@@ -32,13 +33,15 @@ The repository is organized into several key folders and files:
     - Pipelined design.
     - Reduced-complexity parallel processing (L=2 and L=3).
     - Combined pipelining and L=3 parallel processing.
-  - **Testbenches:** HDL testbench files to simulate and verify the filter functionality.
- 
+   
 - **`/TestBench/`**  
   Contains the testbench files for all the Verilog code:
   - **Testbenches:** Simulation testbench files to verify and validate the functionality of the FIR filter across all architectural variations.
 
 - **`/docs/`**  
   Documentation and additional resources:
-  - Detailed explanations of the design choices.
-  - Simulation results and performance analyses.
+  - **Power Consumption Summary Plots:** Detailed plots for all three Verilog architectures.
+  - **Utilization Summary Plots:** Resource utilization comparisons for each architecture.
+  - **Timing Summary Plots:** Timing analysis for the different Verilog implementations.
+  - **MATLAB Response Plots:**  Visual comparisons between the original and quantized responses.
+    
