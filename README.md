@@ -15,26 +15,25 @@ The goal of this project is to:
 - **Coefficient Calculation and Quantization:**  
   - Compute the filter coefficients in MATLAB.
   - Perform appropriate quantization for the coefficients as well as the input, output, and intermediate data.
+- **Noisy Input Signal Simulation:**
+  - Simulate a noisy input signal in MATLAB by generating a clean 50 Hz sine wave and adding Gaussian noise. This simulated noisy signal is used to validate the filter's performance.
 - **Hardware Implementation:**  
   - Implement the FIR filter in Verilog using the MATLAB-calculated coefficients.
   - Demonstrate multiple architectures including:
     1. **Pipelining**
     2. **Reduced-Complexity Parallel Processing:** (with parallelism factors L=2 and L=3)
     3. **Combined Pipelining and L=3 Parallel Processing**
-- **MATLAB Input Signal Simulation:**
-  - Generate a representative input signal in MATLAB—a sine wave corrupted by Gaussian noise—to simulate a noisy environment.
-  - Analyze and visualize the noisy input and the filtered output signal to verify the FIR filter's effectiveness in noise reduction.
 
 ## Repository Structure
 
 The repository is organized into several key folders and files:
 
 - **`/MATLAB/`**  
-  Contains MATLAB scripts and functions used to design the FIR filter and simulate its behavior. In this folder, you will find:
+  Contains MATLAB scripts and functions used to design the FIR filter. In this folder, you will find:
   - **Filter Design Script:** A MATLAB script that calculates the 211-tap FIR filter coefficients meeting the specified transition band and stopband attenuation requirements.
   - **Coefficient Quantization:** Documentation and scripts regarding the quantization process for filter coefficients and data.
+  - **Noisy Input Simulation:** Code that generates a noisy input signal (a 50 Hz sine wave with added Gaussian noise) to test and validate the filter's performance.
   - **Coefficient Export File:** A text file containing the quantized filter coefficients, which are then used in the Verilog implementation.
-  - **Input Signal Simulation:** MATLAB code that generates a noisy input signal (e.g., a sine wave with added Gaussian noise) and applies the designed FIR filter to produce and analyze the filtered output.
 
 - **`/Verilog/`**  
   Includes the hardware implementation files where the MATLAB-generated coefficients are integrated:
@@ -55,4 +54,4 @@ The repository is organized into several key folders and files:
   - **Timing Summary Plots:** Timing analysis for the different Verilog implementations.
   - **MATLAB Response Plots:** Visual comparisons between the original MATLAB filter response and the quantized response used in Verilog.
 
-In summary, the process begins with the MATLAB-based computation, quantization, and simulation of the FIR filter coefficients and input signal, which are then incorporated into the Verilog designs. This workflow ensures that the filter’s performance is accurately translated from simulation to hardware, and that its noise reduction capabilities are effectively validated.
+In summary, the process begins with the MATLAB-based computation and quantization of the FIR filter coefficients, along with simulation of a noisy input signal to validate filter performance. These coefficients and simulation results are then incorporated into the Verilog designs. This workflow ensures that the filter’s performance is accurately translated from simulation to hardware.
