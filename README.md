@@ -52,6 +52,7 @@ The repository is organized into several key folders and files:
   - **Power Consumption Summary Plots:** Detailed plots for all three Verilog architectures.
   - **Utilization Summary Plots:** Resource utilization comparisons for each architecture.
   - **Timing Summary Plots:** Timing analysis for the different Verilog implementations.
+  - **Critical Path Plots:** Critical Path shown in white line.
   - **MATLAB Response Plots:** Visual comparisons between the original MATLAB filter response and the quantized response used in Verilog.
 
 In summary, the process begins with the MATLAB-based computation and quantization of the FIR filter coefficients, along with simulation of a noisy input signal to validate filter performance. These coefficients and simulation results are then incorporated into the Verilog designs. This workflow ensures that the filter’s performance is accurately translated from simulation to hardware.
